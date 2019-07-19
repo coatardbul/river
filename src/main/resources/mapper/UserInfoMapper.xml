@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coatardbul.river.mapper.UserInfoMapper">
+  <resultMap id="BaseResultMap" type="com.coatardbul.river.model.entity.UserInfo">
+    <!--@mbg.generated-->
+    <id column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+    <result column="passWord" jdbcType="VARCHAR" property="password" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="birthDay" jdbcType="VARCHAR" property="birthday" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="mobileNum" jdbcType="VARCHAR" property="mobilenum" />
+    <result column="flag" jdbcType="CHAR" property="flag" />
+    <result column="is_First_Login" jdbcType="CHAR" property="isFirstLogin" />
+    <result column="pwd_Update_TIMESTAMP" jdbcType="TIMESTAMP" property="pwdUpdateTimestamp" />
+    <result column="user_create_TIMESTAMP" jdbcType="TIMESTAMP" property="userCreateTimestamp" />
+    <result column="password_History" jdbcType="VARCHAR" property="passwordHistory" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    user_id, account, `passWord`, `status`, `name`, birthDay, email, mobileNum, flag, 
+    is_First_Login, pwd_Update_TIMESTAMP, user_create_TIMESTAMP, password_History
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from user_info
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from user_info
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coatardbul.river.model.entity.UserInfo">
+    <!--@mbg.generated-->
+    insert into user_info (user_id, account, `passWord`, 
+      `status`, `name`, birthDay, 
+      email, mobileNum, flag, 
+      is_First_Login, pwd_Update_TIMESTAMP, user_create_TIMESTAMP, 
+      password_History)
+    values (#{userId,jdbcType=VARCHAR}, #{account,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{status,jdbcType=CHAR}, #{name,jdbcType=VARCHAR}, #{birthday,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{mobilenum,jdbcType=VARCHAR}, #{flag,jdbcType=CHAR}, 
+      #{isFirstLogin,jdbcType=CHAR}, #{pwdUpdateTimestamp,jdbcType=TIMESTAMP}, #{userCreateTimestamp,jdbcType=TIMESTAMP}, 
+      #{passwordHistory,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.coatardbul.river.model.entity.UserInfo">
+    <!--@mbg.generated-->
+    insert into user_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null and userId != ''">
+        user_id,
+      </if>
+      <if test="account != null and account != ''">
+        account,
+      </if>
+      <if test="password != null and password != ''">
+        `passWord`,
+      </if>
+      <if test="status != null and status != ''">
+        `status`,
+      </if>
+      <if test="name != null and name != ''">
+        `name`,
+      </if>
+      <if test="birthday != null and birthday != ''">
+        birthDay,
+      </if>
+      <if test="email != null and email != ''">
+        email,
+      </if>
+      <if test="mobilenum != null and mobilenum != ''">
+        mobileNum,
+      </if>
+      <if test="flag != null and flag != ''">
+        flag,
+      </if>
+      <if test="isFirstLogin != null and isFirstLogin != ''">
+        is_First_Login,
+      </if>
+      <if test="pwdUpdateTimestamp != null">
+        pwd_Update_TIMESTAMP,
+      </if>
+      <if test="userCreateTimestamp != null">
+        user_create_TIMESTAMP,
+      </if>
+      <if test="passwordHistory != null and passwordHistory != ''">
+        password_History,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null and userId != ''">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null and account != ''">
+        #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null and password != ''">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null and status != ''">
+        #{status,jdbcType=CHAR},
+      </if>
+      <if test="name != null and name != ''">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null and birthday != ''">
+        #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null and email != ''">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="mobilenum != null and mobilenum != ''">
+        #{mobilenum,jdbcType=VARCHAR},
+      </if>
+      <if test="flag != null and flag != ''">
+        #{flag,jdbcType=CHAR},
+      </if>
+      <if test="isFirstLogin != null and isFirstLogin != ''">
+        #{isFirstLogin,jdbcType=CHAR},
+      </if>
+      <if test="pwdUpdateTimestamp != null">
+        #{pwdUpdateTimestamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userCreateTimestamp != null">
+        #{userCreateTimestamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="passwordHistory != null and passwordHistory != ''">
+        #{passwordHistory,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coatardbul.river.model.entity.UserInfo">
+    <!--@mbg.generated-->
+    update user_info
+    <set>
+      <if test="account != null and account != ''">
+        account = #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null and password != ''">
+        `passWord` = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null and status != ''">
+        `status` = #{status,jdbcType=CHAR},
+      </if>
+      <if test="name != null and name != ''">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null and birthday != ''">
+        birthDay = #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null and email != ''">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="mobilenum != null and mobilenum != ''">
+        mobileNum = #{mobilenum,jdbcType=VARCHAR},
+      </if>
+      <if test="flag != null and flag != ''">
+        flag = #{flag,jdbcType=CHAR},
+      </if>
+      <if test="isFirstLogin != null and isFirstLogin != ''">
+        is_First_Login = #{isFirstLogin,jdbcType=CHAR},
+      </if>
+      <if test="pwdUpdateTimestamp != null">
+        pwd_Update_TIMESTAMP = #{pwdUpdateTimestamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userCreateTimestamp != null">
+        user_create_TIMESTAMP = #{userCreateTimestamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="passwordHistory != null and passwordHistory != ''">
+        password_History = #{passwordHistory,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coatardbul.river.model.entity.UserInfo">
+    <!--@mbg.generated-->
+    update user_info
+    set account = #{account,jdbcType=VARCHAR},
+      `passWord` = #{password,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=CHAR},
+      `name` = #{name,jdbcType=VARCHAR},
+      birthDay = #{birthday,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      mobileNum = #{mobilenum,jdbcType=VARCHAR},
+      flag = #{flag,jdbcType=CHAR},
+      is_First_Login = #{isFirstLogin,jdbcType=CHAR},
+      pwd_Update_TIMESTAMP = #{pwdUpdateTimestamp,jdbcType=TIMESTAMP},
+      user_create_TIMESTAMP = #{userCreateTimestamp,jdbcType=TIMESTAMP},
+      password_History = #{passwordHistory,jdbcType=VARCHAR}
+    where user_id = #{userId,jdbcType=VARCHAR}
+  </update>
+</mapper>
