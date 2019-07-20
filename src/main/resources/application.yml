@@ -3,10 +3,10 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/sail?serverTimezone=GMT&useSSL=false&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/river?serverTimezone=GMT&useSSL=false&characterEncoding=utf-8
     driverClassName: com.mysql.jdbc.Driver
     username: root
-    password: root
+    password: xp14459048
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml

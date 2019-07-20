@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coatardbul.river.mapper.AreaItemMapper">
+  <resultMap id="BaseResultMap" type="com.coatardbul.river.model.entity.AreaItem">
+    <!--@mbg.generated-->
+    <id column="CODE" jdbcType="VARCHAR" property="code" />
+    <id column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="LEVELNAME" jdbcType="VARCHAR" property="levelname" />
+    <result column="CITYNAME" jdbcType="VARCHAR" property="cityname" />
+    <result column="PROVINCE" jdbcType="VARCHAR" property="province" />
+    <result column="TYNAME" jdbcType="CHAR" property="tyname" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    CODE, `NAME`, LEVELNAME, CITYNAME, PROVINCE, TYNAME
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from area_item
+    where CODE = #{code,jdbcType=VARCHAR}
+      and `NAME` = #{name,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    <!--@mbg.generated-->
+    delete from area_item
+    where CODE = #{code,jdbcType=VARCHAR}
+      and `NAME` = #{name,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.coatardbul.river.model.entity.AreaItem">
+    <!--@mbg.generated-->
+    insert into area_item (CODE, `NAME`, LEVELNAME, 
+      CITYNAME, PROVINCE, TYNAME
+      )
+    values (#{code,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{levelname,jdbcType=VARCHAR}, 
+      #{cityname,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, #{tyname,jdbcType=CHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.coatardbul.river.model.entity.AreaItem">
+    <!--@mbg.generated-->
+    insert into area_item
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="code != null">
+        CODE,
+      </if>
+      <if test="name != null">
+        `NAME`,
+      </if>
+      <if test="levelname != null">
+        LEVELNAME,
+      </if>
+      <if test="cityname != null">
+        CITYNAME,
+      </if>
+      <if test="province != null">
+        PROVINCE,
+      </if>
+      <if test="tyname != null">
+        TYNAME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="levelname != null">
+        #{levelname,jdbcType=VARCHAR},
+      </if>
+      <if test="cityname != null">
+        #{cityname,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="tyname != null">
+        #{tyname,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coatardbul.river.model.entity.AreaItem">
+    <!--@mbg.generated-->
+    update area_item
+    <set>
+      <if test="levelname != null">
+        LEVELNAME = #{levelname,jdbcType=VARCHAR},
+      </if>
+      <if test="cityname != null">
+        CITYNAME = #{cityname,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        PROVINCE = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="tyname != null">
+        TYNAME = #{tyname,jdbcType=CHAR},
+      </if>
+    </set>
+    where CODE = #{code,jdbcType=VARCHAR}
+      and `NAME` = #{name,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.coatardbul.river.model.entity.AreaItem">
+    <!--@mbg.generated-->
+    update area_item
+    set LEVELNAME = #{levelname,jdbcType=VARCHAR},
+      CITYNAME = #{cityname,jdbcType=VARCHAR},
+      PROVINCE = #{province,jdbcType=VARCHAR},
+      TYNAME = #{tyname,jdbcType=CHAR}
+    where CODE = #{code,jdbcType=VARCHAR}
+      and `NAME` = #{name,jdbcType=VARCHAR}
+  </update>
+</mapper>
