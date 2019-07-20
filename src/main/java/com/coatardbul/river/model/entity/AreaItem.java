@@ -1,8 +1,12 @@
 package com.coatardbul.river.model.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class AreaItem {
     /**
     * 地区名称主键
