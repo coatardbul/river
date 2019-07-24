@@ -1,7 +1,11 @@
 server:
-  port: 8080
-
+  port: 9000
+  servlet:
+    #  全局路径配置
+    context-path: /river
 spring:
+  application:
+    name: river
   datasource:
     url: jdbc:mysql://localhost:3306/river?serverTimezone=GMT&useSSL=false&characterEncoding=utf-8
     driverClassName: com.mysql.jdbc.Driver

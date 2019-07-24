@@ -20,11 +20,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Api(value = "区域信息")
 @Slf4j
 @RestController
-@RequestMapping(value = "/arem")
+@RequestMapping(value = "/query")
 public class AreamController {
     @Autowired
     AreaItemService areaItemService;
@@ -37,7 +38,7 @@ public class AreamController {
             return ResponseUtil.setBody("error");
         }
         AreamFeignInputDto body = requestDto.getBody();
-        AreaItem areaItem = areaItemService.selectByPrimaryKey(body.getCode(), body.getName());
+        List<AreaItem> areaItem = areaItemService.selectByPrimaryKey(body.getCode(), body.getName());
         return  ResponseUtil.setBody(areaItem);
     }
 }

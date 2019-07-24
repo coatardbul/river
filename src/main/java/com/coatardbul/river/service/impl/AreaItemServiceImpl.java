@@ -1,10 +1,14 @@
 package com.coatardbul.river.service.impl;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import com.coatardbul.river.model.entity.AreaItem;
 import com.coatardbul.river.mapper.AreaItemMapper;
 import com.coatardbul.river.service.AreaItemService;
+
+import java.util.List;
+
 @Service
 public class AreaItemServiceImpl implements AreaItemService{
 
@@ -27,8 +31,13 @@ public class AreaItemServiceImpl implements AreaItemService{
     }
 
     @Override
-    public AreaItem selectByPrimaryKey(String code,String name) {
-        return areaItemMapper.selectByPrimaryKey(code,name);
+    public List<AreaItem> selectByPrimaryKey(String code, String name) {
+        if(StringUtils.isEmpty(name)){
+           return areaItemMapper.selectAllByCode(code);
+        }else {
+            return (List<AreaItem>) areaItemMapper.selectByPrimaryKey(code,name);
+        }
+
     }
 
     @Override

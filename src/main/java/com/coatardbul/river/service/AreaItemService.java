@@ -1,6 +1,9 @@
 package com.coatardbul.river.service;
 
 import com.coatardbul.river.model.entity.AreaItem;
+
+import java.util.List;
+
 public interface AreaItemService{
 
 
@@ -10,7 +13,7 @@ public interface AreaItemService{
 
     int insertSelective(AreaItem record);
 
-    AreaItem selectByPrimaryKey(String code,String name);
+    List<AreaItem> selectByPrimaryKey(String code, String name);
 
     int updateByPrimaryKeySelective(AreaItem record);
 
