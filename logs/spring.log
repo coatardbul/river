@@ -1,17 +1,111 @@
-2019-07-21 03:59:39.263  INFO 15288 --- [main] com.coatardbul.river.RiverApplication    : No active profile set, falling back to default profiles: default
-2019-07-21 03:59:41.882  INFO 15288 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=abf05736-8adf-34da-a7c8-cbb033d4d8b5
-2019-07-21 03:59:42.082  INFO 15288 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$14be029b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-21 03:59:42.179  INFO 15288 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$30d80598] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-21 03:59:43.595  INFO 15288 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-07-21 03:59:43.673  INFO 15288 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-07-21 03:59:43.674  INFO 15288 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-21 03:59:43.999  INFO 15288 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-07-21 03:59:44.000  INFO 15288 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4702 ms
-2019-07-21 03:59:44.308  INFO 15288 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2019-07-21 03:59:44.707  INFO 15288 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2019-07-21 03:59:45.991  INFO 15288 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-07-21 03:59:46.023  WARN 15288 --- [main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
-2019-07-21 03:59:46.028  WARN 15288 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-07-21 03:59:46.029  INFO 15288 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-07-21 03:59:46.038  WARN 15288 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-07-21 03:59:46.038  INFO 15288 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-25 09:48:46.425  INFO 11432 --- [main] com.coatardbul.river.RiverApplication    : No active profile set, falling back to default profiles: default
+2019-07-25 09:48:48.476  WARN 11432 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'areaItemMapper' and 'com.coatardbul.river.mapper.AreaItemMapper' mapperInterface. Bean already defined with the same name!
+2019-07-25 09:48:48.477  WARN 11432 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.coatardbul.river.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+2019-07-25 09:48:48.478  WARN 11432 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.coatardbul.river.mapper]' package. Please check your configuration.
+2019-07-25 09:48:49.560  INFO 11432 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c95f57ca-07e8-36b2-8db1-617327ebc90b
+2019-07-25 09:48:49.940  INFO 11432 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7d2e2355] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 09:48:49.999  INFO 11432 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$99482652] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 09:48:51.405  INFO 11432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2019-07-25 09:48:51.451  INFO 11432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-25 09:48:51.451  INFO 11432 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-25 09:48:51.639  INFO 11432 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/river]  : Initializing Spring embedded WebApplicationContext
+2019-07-25 09:48:51.639  INFO 11432 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5130 ms
+2019-07-25 09:48:51.932  INFO 11432 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-07-25 09:48:52.120  INFO 11432 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-25 09:48:53.280  INFO 11432 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-25 09:48:53.344  WARN 11432 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-25 09:48:53.345  INFO 11432 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-25 09:48:53.352  WARN 11432 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-25 09:48:53.352  INFO 11432 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-25 09:48:53.948  INFO 11432 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-25 09:48:54.586  INFO 11432 --- [main] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-25 09:48:56.852  INFO 11432 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-07-25 09:48:56.902  INFO 11432 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-07-25 09:48:56.907  INFO 11432 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.1 created.
+2019-07-25 09:48:56.908  INFO 11432 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-07-25 09:48:56.916  INFO 11432 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-07-25 09:48:56.918  INFO 11432 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-07-25 09:48:56.918  INFO 11432 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.1
+2019-07-25 09:48:56.920  INFO 11432 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@14c06f50
+2019-07-25 09:49:01.111  INFO 11432 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-07-25 09:49:01.662  INFO 11432 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-07-25 09:49:01.921  INFO 11432 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-07-25 09:49:02.880  INFO 11432 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-07-25 09:49:05.004  INFO 11432 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-07-25 09:49:05.004  INFO 11432 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-07-25 09:49:05.176  INFO 11432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path '/river'
+2019-07-25 09:49:05.180  INFO 11432 --- [main] com.coatardbul.river.RiverApplication    : Started RiverApplication in 23.819 seconds (JVM running for 30.532)
+2019-07-25 09:51:29.296  INFO 11432 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/river]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-25 09:51:29.297  INFO 11432 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-25 09:51:29.310  INFO 11432 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-07-25 09:52:35.904  INFO 11432 --- [Thread-72] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-07-25 09:52:35.910  INFO 11432 --- [Thread-72] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2019-07-25 09:52:35.910  INFO 11432 --- [Thread-72] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-07-25 09:52:35.911  INFO 11432 --- [Thread-72] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-07-25 09:52:35.912  INFO 11432 --- [Thread-72] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-07-25 09:52:35.914  INFO 11432 --- [Thread-72] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-25 09:52:35.932  INFO 11432 --- [Thread-72] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-07-25 09:53:28.012  INFO 9588 --- [main] com.coatardbul.river.RiverApplication    : No active profile set, falling back to default profiles: default
+2019-07-25 09:53:28.766  WARN 9588 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'areaItemMapper' and 'com.coatardbul.river.mapper.AreaItemMapper' mapperInterface. Bean already defined with the same name!
+2019-07-25 09:53:28.766  WARN 9588 --- [main] o.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userInfoMapper' and 'com.coatardbul.river.mapper.UserInfoMapper' mapperInterface. Bean already defined with the same name!
+2019-07-25 09:53:28.767  WARN 9588 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.coatardbul.river.mapper]' package. Please check your configuration.
+2019-07-25 09:53:29.329  INFO 9588 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c5f440ba-e422-350a-bdc9-00233dec7276
+2019-07-25 09:53:29.455  INFO 9588 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7597ec7c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 09:53:29.484  INFO 9588 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$91b1ef79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-25 09:53:30.215  INFO 9588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9000 (http)
+2019-07-25 09:53:30.251  INFO 9588 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-07-25 09:53:30.252  INFO 9588 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-25 09:53:30.430  INFO 9588 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/river]  : Initializing Spring embedded WebApplicationContext
+2019-07-25 09:53:30.430  INFO 9588 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2385 ms
+2019-07-25 09:53:30.591  INFO 9588 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-07-25 09:53:30.757  INFO 9588 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-25 09:53:31.515  INFO 9588 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-25 09:53:31.546  WARN 9588 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-25 09:53:31.546  INFO 9588 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-25 09:53:31.552  WARN 9588 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-07-25 09:53:31.552  INFO 9588 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-07-25 09:53:31.754  INFO 9588 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-25 09:53:31.836  INFO 9588 --- [main] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-07-25 09:53:32.231  INFO 9588 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2019-07-25 09:53:32.246  INFO 9588 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2019-07-25 09:53:32.246  INFO 9588 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.1 created.
+2019-07-25 09:53:32.247  INFO 9588 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2019-07-25 09:53:32.248  INFO 9588 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.1) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2019-07-25 09:53:32.248  INFO 9588 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2019-07-25 09:53:32.248  INFO 9588 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.1
+2019-07-25 09:53:32.249  INFO 9588 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6ce365b7
+2019-07-25 09:53:33.919  INFO 9588 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-07-25 09:53:34.123  INFO 9588 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-07-25 09:53:34.154  INFO 9588 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-07-25 09:53:34.206  INFO 9588 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-07-25 09:53:34.460  INFO 9588 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2019-07-25 09:53:34.461  INFO 9588 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2019-07-25 09:53:34.510  INFO 9588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9000 (http) with context path '/river'
+2019-07-25 09:53:34.514  INFO 9588 --- [main] com.coatardbul.river.RiverApplication    : Started RiverApplication in 11.239 seconds (JVM running for 16.943)
+2019-07-25 09:54:01.202  INFO 9588 --- [http-nio-9000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/river]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-25 09:54:01.203  INFO 9588 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-07-25 09:54:01.220  INFO 9588 --- [http-nio-9000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2019-07-25 10:00:47.793  WARN 9588 --- [File Watcher] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.coatardbul.river.mapper]' package. Please check your configuration.
+2019-07-25 10:00:47.798  WARN 9588 --- [File Watcher] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.coatardbul.river.mapper]' package. Please check your configuration.
+2019-07-25 11:10:50.325  INFO 9588 --- [http-nio-9000-exec-3] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-25 13:44:14.524  INFO 9588 --- [Thread-49] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-07-25 13:44:14.533  INFO 9588 --- [Thread-49] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2019-07-25 13:44:14.533  INFO 9588 --- [Thread-49] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2019-07-25 13:44:14.534  INFO 9588 --- [Thread-49] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2019-07-25 13:44:14.535  INFO 9588 --- [Thread-49] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2019-07-25 13:44:14.536  INFO 9588 --- [Thread-49] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-25 13:44:14.547  INFO 9588 --- [Thread-49] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
