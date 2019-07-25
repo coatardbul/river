@@ -6,6 +6,7 @@ import com.coatardbul.river.common.util.ResponseUtil;
 import com.coatardbul.river.model.dto.UserDto;
 import com.coatardbul.river.model.entity.AreaItem;
 import com.coatardbul.river.model.feign.AreamFeignInputDto;
+import com.coatardbul.river.model.feign.AreamFeignOutputDto;
 import com.coatardbul.river.model.feign.RequestDto;
 import com.coatardbul.river.model.feign.ResponseDto;
 import com.coatardbul.river.service.AreaItemService;
@@ -31,7 +32,7 @@ public class AreamController {
     AreaItemService areaItemService;
 
     @ApiOperation(value = "获取区域信息", notes = "")
-    @RequestMapping(value = "/getAtramList", method = RequestMethod.POST)
+    @RequestMapping(value = "/getAreamList", method = RequestMethod.POST)
     public ResponseDto getAreamInfo(@RequestBody @Valid RequestDto<AreamFeignInputDto> requestDto, BindingResult bindResult) {
         if (bindResult.hasErrors()) {
             log.error(bindResult.getFieldError().getDefaultMessage());
@@ -39,6 +40,8 @@ public class AreamController {
         }
         AreamFeignInputDto body = requestDto.getBody();
         List<AreaItem> areaItem = areaItemService.selectByPrimaryKey(body.getCode(), body.getName());
-        return  ResponseUtil.setBody(areaItem);
+        AreamFeignOutputDto areamFeignOutputDto=new AreamFeignOutputDto();
+        areamFeignOutputDto.setList(areaItem);
+        return  ResponseUtil.setBody(areamFeignOutputDto);
     }
 }
