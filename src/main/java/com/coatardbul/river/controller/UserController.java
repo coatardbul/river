@@ -17,16 +17,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
-@Api(value = "银行账户信息")
+@Api(value = "用户信息")
 @Slf4j
 @RestController
-@RequestMapping(value = "/test")
+@RequestMapping(value = "/query")
 public class UserController {
     @Autowired
     UserInfoService userInfoService;
 
-    @ApiOperation(value = "新增银行账户信息", notes = "新增银行账户信息")
-    @RequestMapping(value = "/test", method = RequestMethod.POST)
+    @ApiOperation(value = "获取用户信息", notes = "获取用户信息")
+    @RequestMapping(value = "/getUserInfo", method = RequestMethod.POST)
     public CommonResult insertBankAcc(@RequestBody @Valid UserDto userDto, BindingResult bindResult) {
 //        UserInfo userInfo=new UserInfo();
 //        userInfo.setAccount("dsf");

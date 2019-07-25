@@ -33,8 +33,7 @@ public class FileDownloadController {
     @RequestMapping(value = "/downloadFile", method = RequestMethod.POST)
     public ResponseEntity<byte[]> downloadFile(String fileType, HttpServletRequest request ){
 
-        System.out.println(request.getParameter("fileType"));
-        System.out.println("参数fileType: "+fileType);
+
 
         HttpHeaders headers = new HttpHeaders();
         ResponseEntity<byte[]> entity = null;
@@ -44,20 +43,20 @@ public class FileDownloadController {
 
             byte[] bytes = new byte[in.available()];
 
-            String imageName="001.png";
+//            String imageName="001.png";
 
-            //处理IE下载文件的中文名称乱码的问题
-            String header = request.getHeader("User-Agent").toUpperCase();
-            if (header.contains("MSIE") || header.contains("TRIDENT") || header.contains("EDGE")) {
-                imageName = URLEncoder.encode(imageName, "utf-8");
-                imageName = imageName.replace("+", "%20");    //IE下载文件名空格变+号问题
-            } else {
-                imageName = new String(imageName.getBytes(), "iso-8859-1");
-            }
+//            //处理IE下载文件的中文名称乱码的问题
+//            String header = request.getHeader("User-Agent").toUpperCase();
+//            if (header.contains("MSIE") || header.contains("TRIDENT") || header.contains("EDGE")) {
+//                imageName = URLEncoder.encode(imageName, "utf-8");
+//                imageName = imageName.replace("+", "%20");    //IE下载文件名空格变+号问题
+//            } else {
+//                imageName = new String(imageName.getBytes(), "iso-8859-1");
+//            }
 
             in.read(bytes);
 
-            headers.add("Content-Disposition", "attachment;filename="+imageName);
+          //  headers.add("Content-Disposition", "attachment;filename="+imageName);
           //  entity = new ResponseEntity<byte[]>(bytes, headers, HttpStatus.OK);
             entity = new ResponseEntity<byte[]>(bytes,  HttpStatus.OK);
 
@@ -72,7 +71,6 @@ public class FileDownloadController {
                 }
             }
         }
-
         return entity;
     }
 

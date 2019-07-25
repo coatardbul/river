@@ -28,7 +28,7 @@ public class Swqgger2Config {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("sail系统api文档")
+                .title("river系统api文档")
                 .description("")
                 .termsOfServiceUrl("http://www.baidu.com")
                 .version("1.0")
