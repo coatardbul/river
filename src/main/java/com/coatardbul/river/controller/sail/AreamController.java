@@ -36,7 +36,7 @@ public class AreamController {
     public ResponseDto getAreamInfo(@RequestBody @Valid RequestDto<AreamFeignInputDto> requestDto, BindingResult bindResult) {
         if (bindResult.hasErrors()) {
             log.error(bindResult.getFieldError().getDefaultMessage());
-            return ResponseUtil.setBody("error");
+            return ResponseUtil.setBody(bindResult.getFieldError().getDefaultMessage());
         }
         AreamFeignInputDto body = requestDto.getBody();
         List<AreaItem> areaItem = areaItemService.selectByPrimaryKey(body.getCode(), body.getName());
