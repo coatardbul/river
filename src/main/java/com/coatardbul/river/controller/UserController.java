@@ -36,15 +36,14 @@ public class UserController {
         // dto对象的非空，长度检查
         if (bindResult.hasErrors()) {
             log.error(bindResult.getFieldError().getDefaultMessage());
-            return CommonResult.failed( bindResult.getFieldError().getDefaultMessage());
+            return CommonResult.failed(bindResult.getFieldError().getDefaultMessage());
         }
         try {
             UserInfo userInfo = userInfoService.selectByPrimaryKey("123123");
             return CommonResult.success(userInfo);
-        }catch (Exception e){
+        } catch (Exception e) {
             return CommonResult.failed(e.getMessage());
         }
-
 
 
     }

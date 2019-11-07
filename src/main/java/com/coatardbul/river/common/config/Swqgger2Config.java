@@ -1,4 +1,3 @@
-
 package com.coatardbul.river.common.config;
 
 import org.springframework.context.annotation.Bean;

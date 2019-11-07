@@ -1,8 +1,9 @@
 package com.coatardbul.river.mapper;
-import java.util.List;
 
 import com.coatardbul.river.model.entity.AreaItem;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface AreaItemMapper {
     int deleteByPrimaryKey(@Param("code") String code, @Param("name") String name);
@@ -13,7 +14,7 @@ public interface AreaItemMapper {
 
     AreaItem selectByPrimaryKey(@Param("code") String code, @Param("name") String name);
 
-    List<AreaItem> selectAllByCode(@Param("code")String code);
+    List<AreaItem> selectAllByCode(@Param("code") String code);
 
     int updateByPrimaryKeySelective(AreaItem record);
 

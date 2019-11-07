@@ -11,19 +11,17 @@ import org.springframework.http.ResponseEntity;
 
 import java.io.*;
 import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
-import java.util.zip.ZipInputStream;
-import java.util.zip.ZipOutputStream;
 
 public class FileParseUtil {
     public static final String BRANCH_CODE = "branchCode";
     public static final String BRANCH_NAME = "branchName";
     public static final String BRANCH_ADDR = "branchAddr";
+
     public static void main(String[] args) throws Exception {
         File ff = new File("C:\\Users\\coatardbul\\Desktop\\cnap.zip");
 
@@ -60,31 +58,30 @@ public class FileParseUtil {
 
             ZipFile zip = new ZipFile(file, Charset.forName("GBK"));
 
-            for(Enumeration entries = zip.entries(); entries.hasMoreElements();)
-            {
-                ZipEntry entry = (ZipEntry)entries.nextElement();
+            for (Enumeration entries = zip.entries(); entries.hasMoreElements(); ) {
+                ZipEntry entry = (ZipEntry) entries.nextElement();
                 String zipEntryName = entry.getName();
                 InputStream inputSteamTemp = zip.getInputStream(entry);
 
 
                 List<BedcBankbranch> list = new ArrayList<>();
-                CSVParser parser = CSVParser.parse(inputSteamTemp, Charset.forName("GBK"), CSVFormat.DEFAULT.withHeader(BRANCH_CODE, BRANCH_NAME,BRANCH_ADDR));
-                int i=0;
-                int j=0;
+                CSVParser parser = CSVParser.parse(inputSteamTemp, Charset.forName("GBK"), CSVFormat.DEFAULT.withHeader(BRANCH_CODE, BRANCH_NAME, BRANCH_ADDR));
+                int i = 0;
+                int j = 0;
                 BedcBankbranch bedcBankbranch = new BedcBankbranch();
                 for (final CSVRecord record : parser) {
-                    if(++j<3){
-                       continue;
+                    if (++j < 3) {
+                        continue;
                     }
                     bedcBankbranch = new BedcBankbranch();
                     //银行联行号，前三位为银行代码
                     bedcBankbranch.setBankcode(record.get(BRANCH_CODE).substring(0, 3));
                     bedcBankbranch.setBranchcode(record.get(BRANCH_NAME));
-                  // bedcBankbranch.setBranchcode(record.get(BRANCH_CODE));
+                    // bedcBankbranch.setBranchcode(record.get(BRANCH_CODE));
                     bedcBankbranch.setBranchno(record.get(BRANCH_ADDR));
                     //.4位城市代码
                     bedcBankbranch.setPlatprocode(record.get(BRANCH_CODE).substring(3, 7));
-                    System.out.println(++i+":"+bedcBankbranch.toString());
+                    System.out.println(++i + ":" + bedcBankbranch.toString());
                     list.add(bedcBankbranch);
                 }
 
@@ -101,12 +98,12 @@ public class FileParseUtil {
 
 
     /**
-     *解析单个文件
+     * 解析单个文件
      */
     @Test
-    public  void parseFile() throws Exception {
+    public void parseFile() throws Exception {
         File ff = new File("C:\\Users\\coatardbul\\Desktop\\cnap1.csv");
-        FileInputStream fileInputStream=new FileInputStream(ff);
+        FileInputStream fileInputStream = new FileInputStream(ff);
         CSVParser parser = CSVParser.parse(fileInputStream, Charset.forName("GBK"), CSVFormat.DEFAULT.withHeader(BRANCH_CODE, BRANCH_NAME));
         List<BedcBankbranch> list = new ArrayList<>();
         BedcBankbranch bedcBankbranch = new BedcBankbranch();

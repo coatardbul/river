@@ -4,10 +4,10 @@ import com.coatardbul.river.model.entity.AreaItem;
 
 import java.util.List;
 
-public interface AreaItemService{
+public interface AreaItemService {
 
 
-    int deleteByPrimaryKey(String code,String name);
+    int deleteByPrimaryKey(String code, String name);
 
     int insert(AreaItem record);
 

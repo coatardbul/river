@@ -1,12 +1,14 @@
 package com.coatardbul.river.service.impl;
 
-import org.springframework.stereotype.Service;
-import javax.annotation.Resource;
 import com.coatardbul.river.mapper.UserInfoMapper;
 import com.coatardbul.river.model.entity.UserInfo;
 import com.coatardbul.river.service.UserInfoService;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+
 @Service
-public class UserInfoServiceImpl implements UserInfoService{
+public class UserInfoServiceImpl implements UserInfoService {
 
     @Resource
     private UserInfoMapper userInfoMapper;

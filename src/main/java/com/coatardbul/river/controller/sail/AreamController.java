@@ -1,9 +1,7 @@
 package com.coatardbul.river.controller.sail;
 
 
-import com.coatardbul.river.common.api.CommonResult;
 import com.coatardbul.river.common.util.ResponseUtil;
-import com.coatardbul.river.model.dto.UserDto;
 import com.coatardbul.river.model.entity.AreaItem;
 import com.coatardbul.river.model.feign.AreamFeignInputDto;
 import com.coatardbul.river.model.feign.AreamFeignOutputDto;
@@ -40,8 +38,8 @@ public class AreamController {
         }
         AreamFeignInputDto body = requestDto.getBody();
         List<AreaItem> areaItem = areaItemService.selectByPrimaryKey(body.getCode(), body.getName());
-        AreamFeignOutputDto areamFeignOutputDto=new AreamFeignOutputDto();
+        AreamFeignOutputDto areamFeignOutputDto = new AreamFeignOutputDto();
         areamFeignOutputDto.setList(areaItem);
-        return  ResponseUtil.setBody(areamFeignOutputDto);
+        return ResponseUtil.setBody(areamFeignOutputDto);
     }
 }

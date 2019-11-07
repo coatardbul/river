@@ -1,7 +1,4 @@
-
 package com.coatardbul.river.common.util;
-
-
 
 
 import com.coatardbul.river.model.feign.RequestDto;

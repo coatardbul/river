@@ -1,4 +1,3 @@
-
 package com.coatardbul.river.model.feign;
 
 import lombok.AllArgsConstructor;

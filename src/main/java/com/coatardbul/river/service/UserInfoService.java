@@ -1,7 +1,8 @@
 package com.coatardbul.river.service;
 
 import com.coatardbul.river.model.entity.UserInfo;
-public interface UserInfoService{
+
+public interface UserInfoService {
 
 
     int deleteByPrimaryKey(String userId);

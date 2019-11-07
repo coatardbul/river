@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.*;
-import java.net.URLEncoder;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * @author: suxiaolei
@@ -25,18 +27,16 @@ import java.net.URLEncoder;
 public class FileDownloadController {
 
 
-
     @ApiOperation(value = "下载文件信息", notes = "")
     @RequestMapping(value = "/downloadFile", method = RequestMethod.POST)
-    public ResponseEntity<byte[]> downloadFile(String fileType, HttpServletRequest request ){
-
+    public ResponseEntity<byte[]> downloadFile(String fileType, HttpServletRequest request) {
 
 
         HttpHeaders headers = new HttpHeaders();
         ResponseEntity<byte[]> entity = null;
-        InputStream in=null;
+        InputStream in = null;
         try {
-            in=new FileInputStream(new File("C:\\Users\\coatardbul\\Desktop\\cc.csv"));
+            in = new FileInputStream(new File("C:\\Users\\coatardbul\\Desktop\\cc.csv"));
 
             byte[] bytes = new byte[in.available()];
 
@@ -53,14 +53,14 @@ public class FileDownloadController {
 
             in.read(bytes);
 
-          //  headers.add("Content-Disposition", "attachment;filename="+imageName);
-          //  entity = new ResponseEntity<byte[]>(bytes, headers, HttpStatus.OK);
-            entity = new ResponseEntity<byte[]>(bytes,  HttpStatus.OK);
+            //  headers.add("Content-Disposition", "attachment;filename="+imageName);
+            //  entity = new ResponseEntity<byte[]>(bytes, headers, HttpStatus.OK);
+            entity = new ResponseEntity<byte[]>(bytes, HttpStatus.OK);
 
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
-            if(in!=null) {
+        } finally {
+            if (in != null) {
                 try {
                     in.close();
                 } catch (IOException e) {
