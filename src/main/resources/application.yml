@@ -26,6 +26,10 @@ logging:
     java.sql.PreparedStatement: debug
 
 eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: rivers
+    appname: rivers
   client:
     serviceUrl:
-      defaultZone: http://localhost:${server.port}/eureka/
+      defaultZone: http://localhost:8001/eureka/
