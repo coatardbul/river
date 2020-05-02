@@ -1,6 +1,7 @@
-package com.coatardbul.river.controller;
+package com.coatardbul.river.controller.local;
 
 
+import com.coatardbul.river.common.annotation.WebLog;
 import com.coatardbul.river.common.api.CommonResult;
 import com.coatardbul.river.model.dto.UserDto;
 import com.coatardbul.river.model.entity.UserInfo;
@@ -18,13 +19,13 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @Api(value = "用户信息")
+@WebLog("1111111")
 @Slf4j
 @RestController
 @RequestMapping(value = "/query")
 public class UserController {
     @Autowired
     UserInfoService userInfoService;
-
     @ApiOperation(value = "获取用户信息", notes = "获取用户信息")
     @RequestMapping(value = "/getUserInfo", method = RequestMethod.POST)
     public CommonResult insertBankAcc(@RequestBody @Valid UserDto userDto, BindingResult bindResult) {
