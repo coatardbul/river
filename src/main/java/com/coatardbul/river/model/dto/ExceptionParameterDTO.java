@@ -15,7 +15,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ExceptionDTO {
+public class ExceptionParameterDTO {
     @NotBlank(message = "字符串不能为空")
     private String notNullStr;
 
@@ -29,7 +29,9 @@ public class ExceptionDTO {
 
     @NotNull(message = "字符串不能为空")
     private BigInteger notNullNum;
-
+    /**
+     * list中参数的核验
+     */
     @Valid
     private List list;
 

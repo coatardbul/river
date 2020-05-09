@@ -1,4 +1,4 @@
-package com.coatardbul.river.common.aop;
+package com.coatardbul.river.common.annotation;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -40,7 +40,8 @@ public class WebLogAspect {
     public Object advice(ProceedingJoinPoint joinPoint) {
 
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-
+        log.info("--------" +request.getMethod()+ request.getRequestURI() + "----开始");
+        log.info("--------" +request.getQueryString() + "----开始");
         Map map = new HashMap();
         Enumeration paramNames = request.getParameterNames();
         while (paramNames.hasMoreElements()) {
@@ -78,10 +79,10 @@ public class WebLogAspect {
         try {
             result = joinPoint.proceed(args);
         } catch (Throwable throwable) {
-            throwable.printStackTrace();
+           log.error(throwable.getMessage(),throwable);
         }
-
-        return null;
+        log.info("--------" + request.getRequestURI() + "----结束");
+        return result;
 
     }
 }

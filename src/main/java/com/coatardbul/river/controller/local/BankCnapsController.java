@@ -1,6 +1,7 @@
 package com.coatardbul.river.controller.local;
 
 
+import com.coatardbul.river.common.annotation.WebLog;
 import com.coatardbul.river.common.constants.RequestUrlConstant;
 import com.coatardbul.river.model.entity.BankCnaps;
 import com.coatardbul.river.service.BankCnapsService;
@@ -15,6 +16,7 @@ import javax.validation.Valid;
 
 @Api(value = "人行联行号")
 @Slf4j
+@WebLog
 @RestController
 @ControllerAdvice
 @RequestMapping(value = RequestUrlConstant.BANK_CNAPS)

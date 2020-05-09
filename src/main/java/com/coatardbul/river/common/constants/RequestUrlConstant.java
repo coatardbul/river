@@ -9,6 +9,6 @@ public class RequestUrlConstant {
     /**
      * 异常测试
      */
-    public static final String EXCEPTION_TEST="testException";
+    public static final String EXCEPTION_TEST="exception";
 
 }

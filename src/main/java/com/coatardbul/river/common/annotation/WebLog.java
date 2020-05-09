@@ -12,6 +12,9 @@ import java.lang.annotation.*;
  * 注解作用的位置
  */
 @Target({ElementType.METHOD, ElementType.TYPE})
+/*
+在Controller上面添加，打印请求参数
+ */
 public @interface WebLog {
     String value() default "";
 }
