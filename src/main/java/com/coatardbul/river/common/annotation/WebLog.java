@@ -16,5 +16,7 @@ import java.lang.annotation.*;
 在Controller上面添加，打印请求参数
  */
 public @interface WebLog {
+
+   //TODO 注释定义的变量的使用
     String value() default "";
 }
