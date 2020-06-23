@@ -48,3 +48,6 @@ rabbitMQ的使用
 20200615
 1.检查日志报警
 2.阿里线上java诊断，arthas,
+
+20200623
+关于transcation的注释失效

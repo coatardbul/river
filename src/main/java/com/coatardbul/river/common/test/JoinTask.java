@@ -1,7 +1,5 @@
 package com.coatardbul.river.common.test;
 
-import com.coatardbul.river.common.util.urlSpider.ProvinceCItyInfo;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
